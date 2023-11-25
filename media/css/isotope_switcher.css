@@ -1,0 +1,38 @@
+/**
+ * @package CG modules switcher Module
+ * @version 1.0.2 : 2018 March
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @copyright (c) 2018 ConseilGouz. All Rights Reserved.
+ * @author ConseilGouz 
+ */
+.isosw_button {
+  display: inline-block;
+  padding: 0.5em 1.0em;
+  margin-bottom: 10px;
+  background: #bfbcbc;
+  border: none;
+  border-radius: 7px;
+  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+  color: #222;
+  cursor: pointer;
+}
+.isosw_button-group .btn:hover,
+.isosw_button:hover {
+  background-color: #8CF;
+  color: #222;
+}
+.isosw_button-group .btn {
+  margin-right: 2px;
+  margin-top: 2px;
+}
+
+.isosw_button.is-checked {
+  color: white;
+  background-color:blue;
+}
+.isosw_button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+.isosw_button:first-child { border-radius: 0.5em 0 0 0.5em; }
+.isosw_button:last-child { border-radius: 0 0.5em 0.5em 0; }

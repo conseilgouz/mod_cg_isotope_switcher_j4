@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="module" method="upgrade" client="site">
+	<name>CG Isotope Switcher</name>
+	<author>ConseilGouz</author>
+	<creationDate>2023-11-25</creationDate>
+	<copyright>Copyright (C) 2023 ConseilGouz. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
+	<authorUrl>www.conseilgouz.com</authorUrl>
+	<version>2.0.1</version>
+	<namespace path="src">ConseilGouz\Module\CGIsotopeSwitcher</namespace>
+	<description>ISOSW_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<filename module="mod_cg_isotope_switcher">mod_cg_isotope_switcher.php</filename>
+		<filename>index.html</filename>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+        <folder>language</folder>
+	</files>
+	<media destination="mod_cg_isotope_switcher" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+		<filename>index.html</filename>
+	</media>
+	<languages>
+		<language tag="en-GB">language/en-GB/mod_cg_isotope_switcher.ini</language>
+		<language tag="eb-GB">language/en-GB/mod_cg_isotope_switcher.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/mod_cg_isotope_switcher.ini</language>
+		<language tag="fr-FR">language/fr-FR/mod_cg_isotope_switcher.sys.ini</language>
+	</languages>
+	<config>
+	<fields name="params" >
+		<fieldset name="basic">
+				<field
+					name="modules"
+					type="sql"
+					multiple="true"
+					label="ISOSW_MODULES"
+					description="ISOSW_MODULES_DESC"
+					query="select id as id, title as value from #__modules where published = 1 and client_id = 0 and module like 'mod_simple_isotope'"
+					key_field="id"
+					value_field="value"
+				/>
+				<field
+					name="bootstrapbutton"
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="false" 
+					label="ISOSW_BOOTSTRAP" 
+					description="ISOSW_BOOTSTRAP_DESC"
+				>
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+				</field>
+				<field name="sp-effect" type="list" default="swoopIn" label="ISOSW_EFFECT" description="ISOSW_EFFECT_DESC" >
+				<option value="fadeIn">fadeIn</option>
+				<option value="flipXIn">flipXIn</option>
+				<option value="flipYIn">flipYIn</option>
+				<option value="swoopIn">swoopIn</option>
+				<option value="whirlIn">whirlIn</option>
+				<option value="slideUpIn">slideUpIn</option>
+				<option value="slideUpBigIn">slideUpBigIn</option>
+				<option value="slideDownBigIn">slideDownBigIn</option>
+				<option value="slideLeftBigIn">slideLeftBigIn</option>
+				<option value="slideRightBigIn">slideRightBigIn</option>
+				<option value="perspectiveUpIn">perspectiveUpIn</option>
+				<option value="perspectiveDownIn">perspectiveDownIn</option>
+				<option value="perspectiveLeftIn">perspectiveLeftIn</option>
+				<option value="perspectiveRightIn">perspectiveRightIn</option>
+				</field>
+				
+				<field name="css" type="textarea" label="ISOSW_CSS" description="ISOSW_CSS_DESC" cols="40" rows="4" filter="raw" 
+					default=".cg-isotope-switcher {} .cg-modules {} .cg-mod-sw-btn {  color: black;  background-color:lightgrey;}.cg-mod-sw-btn.is-checked {  color: blue;  background-color:aliceblue;}"/>
+				
+		</fieldset>
+		<fieldset name="advanced">
+		<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		</fieldset>
+	</fields>
+	</config>
+	<changelogurl>https://raw.githubusercontent.com/conseilgouz/mod_cg_gallery_j4/master/mod_cg_isotope_switcher_changelog.xml</changelogurl>
+	<updateservers>
+	<server type="extension" name="CG Module Switcher" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/mod_cg_isotope_switcher_update.xml</server>
+	</updateservers>
+	
+</extension>
