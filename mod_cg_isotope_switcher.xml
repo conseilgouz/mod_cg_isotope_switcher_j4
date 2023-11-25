@@ -7,7 +7,7 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>2.0.2</version>
+	<version>2.0.3</version>
 	<namespace path="src">ConseilGouz\Module\CGIsotopeSwitcher</namespace>
 	<description>ISOSW_XML_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
