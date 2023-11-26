@@ -2,12 +2,12 @@
 <extension version="4.0" type="module" method="upgrade" client="site">
 	<name>CG Isotope Switcher</name>
 	<author>ConseilGouz</author>
-	<creationDate>2023-11-25</creationDate>
+	<creationDate>2023-11-26</creationDate>
 	<copyright>Copyright (C) 2023 ConseilGouz. All rights reserved</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>2.0.3</version>
+	<version>2.1.0</version>
 	<namespace path="src">ConseilGouz\Module\CGIsotopeSwitcher</namespace>
 	<description>ISOSW_XML_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
@@ -30,8 +30,9 @@
 		<language tag="fr-FR">language/fr-FR/mod_cg_isotope_switcher.sys.ini</language>
 	</languages>
 	<config>
-	<fields name="params" >
-		<fieldset name="basic">
+	<fields name="params">
+		<fieldset name="basic" addfieldprefix="ConseilGouz\Module\CGIsotopeSwitcher\Site\Field">
+				<field name="version" type="version"  margintop="-3em" extension="mod_cg_isotope_switcher"/>
 				<field
 					name="modules"
 					type="sql"

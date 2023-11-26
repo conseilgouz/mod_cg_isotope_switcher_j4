@@ -2,6 +2,24 @@
 	<changelog>
 		<element>mod_cg_isotope_switcher</element>
 		<type>Module</type>
+		<version>2.1.0</version>
+        <note>
+            <item>Update : 26/11/2023</item>
+        </note>
+		<change>
+			<item>Use animate.css instead of velocity.js</item>
+			<item>Use WebAssetsManager</item>
+		</change>
+		<addition>
+			<item>Dynamic version number from manifest file</item>
+		</addition>
+		<remove>
+			<item>remove JQuery dependency</item>
+		</remove>
+	</changelog>
+	<changelog>
+		<element>mod_cg_isotope_switcher</element>
+		<type>Module</type>
 		<version>2.0.3</version>
         <note>
             <item>Update : 25/11/2023</item>
